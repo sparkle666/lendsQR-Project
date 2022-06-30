@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600&family=Roboto:wght@300;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,600;1,700&display=swap');
 
+//  Default colors
+$navlinkColor: #213F7D;
+$fontWeight: 400;
+$fontSize: 16px;
+$fontFamily: Work Sans;
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +14,7 @@
   font-size: 14px;
 }
 p {
-  font-family: 'Work Sans', sans-serif;
+  font-family: $fontFamily, "Poppins";
   color: #213f7d;
 }
 input {
@@ -18,8 +24,8 @@ a {
   color: #485fc7;
   cursor: pointer;
   text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
 }
 a:hover {
   color: #363636;
@@ -77,11 +83,12 @@ img {
   z-index: 2;
 }
 .sidebar {
-  width: 283px;
+  width: 300px;
   background: #ffffff;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
-  height: 90vh;
+  height: 100vh;
   z-index: 1;
+  position: fixed;
 }
 .body {
   width: auto;
@@ -178,11 +185,14 @@ img {
   color: white;
   word-spacing: 30px;
 }
-.sidebar__links a > span {
-  margin-left: 30px;
+// Dropdown
+
+.dropdown button{
+  outline: none;
+  border-color: none;
 }
-.anticon {
-  margin-right: 12px;
+a > span > svg{
+  margin-right: 10px;
 }
 
 /* Mobile responsive */

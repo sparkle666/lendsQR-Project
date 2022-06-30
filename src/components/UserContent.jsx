@@ -1,6 +1,8 @@
 import React from 'react';
 import Card from './Card';
 import CardList from './CardList';
+import { FaUserFriends } from "react-icons/fa"
+import { FaBeer } from 'react-icons/fa'
 
 const UserContent = () => {
   return (

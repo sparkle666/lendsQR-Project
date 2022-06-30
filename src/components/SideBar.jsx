@@ -1,17 +1,74 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-// import { SmileTwoTone } from '@ant-design/icons';
+import Dropdown from "./Dropdown";
+import {
+  FaUserFriends,
+  FaUsers,
+  FaPiggyBank,
+  FaUniversity,
+  FaCoins,
+  FaChartBar,
+  FaSlidersH,
+  FaPercentage,
+  FaClipboardList,
+  FaUserCog,
+  FaHandHoldingUsd,
+  FaHandshake,
+  FaUserPlus,
+  FaUserTimes,
+  FaBriefcase,
+  FaUsersSlash,
+  FaUserCheck,
+} from "react-icons/fa";
+
 const SideBar = () => {
+  let iconNames = [
+    <FaUserFriends />,
+    <FaUsers />,
+    <FaHandHoldingUsd />,
+    <FaPiggyBank />,
+    <FaHandshake />,
+    <FaHandHoldingUsd />,
+    <FaUserCheck />,
+    <FaUserPlus />,
+  ];
+  let iconTitle = [
+    "Users",
+    "Guarantors",
+    "Loans",
+    "Decision Models",
+    "Savings",
+    "Loan Requests",
+    "Whitelist",
+    "Karma",
+  ];
+  let iconNames2 = {
+    
+  }
+  let iconTitle2 = [
+    "Organization",
+    "Loan Products",
+    "Savings Products",
+    "Fees and Charges",
+    "Transactions",
+    "Services",
+    "Service Accounts",
+    "Settlements",
+  ];
   return (
     <>
-      <Links />
-      <Links />
+      <Dropdown />
+      <p style={{ marginLeft: "10px", marginTop: "14px" }}>CUSTOMERS</p>
+      {iconTitle.map((title, index) => (
+        <Links name={title} icon={iconNames[index]} />
+      ))}
+      <p style={{ marginLeft: "10px", marginTop: "14px" }}>BUSINESSES</p>
     </>
   );
 };
 export default SideBar;
 
-const Links = () => {
+export const Links = ({ name, icon }) => {
   return (
     <NavLink
       style={({ isActive }) => {
@@ -30,10 +87,11 @@ const Links = () => {
               padding: "8px",
             };
       }}
-      to="/"
+      to="/home"
       className="sidebar__link"
     >
-      Users
+      <span>{icon}</span>
+      {name}
     </NavLink>
   );
 };
