@@ -42,9 +42,17 @@ const SideBar = () => {
     "Whitelist",
     "Karma",
   ];
-  let iconNames2 = {
-    
-  }
+  let iconNames2 = [
+    <FaBriefcase />,
+    <FaHandHoldingUsd />,
+    <FaUniversity />,
+    <FaCoins />,
+    <FaHandshake />,
+    <FaHandHoldingUsd />,
+    <FaUserCog />,
+    <FaUserPlus />,
+    <FaChartBar />,
+  ];
   let iconTitle2 = [
     "Organization",
     "Loan Products",
@@ -54,15 +62,30 @@ const SideBar = () => {
     "Services",
     "Service Accounts",
     "Settlements",
+    "Reports",
   ];
   return (
     <>
-      <Dropdown />
+      <div class="control has-icons-left">
+        <div class="select">
+          <select style = {{border: "none"}}>
+            <option>Select</option>
+            <option>Lendersqr</option>
+            <option selected>Lendster</option>
+          </select>
+        </div>
+        <span class="icon is-left">
+          <FaBriefcase />
+        </span>
+      </div>
       <p style={{ marginLeft: "10px", marginTop: "14px" }}>CUSTOMERS</p>
       {iconTitle.map((title, index) => (
         <Links name={title} icon={iconNames[index]} />
       ))}
       <p style={{ marginLeft: "10px", marginTop: "14px" }}>BUSINESSES</p>
+      {iconTitle2.map((title, index) => (
+        <Links name={title} icon={iconNames2[index]} />
+      ))}
     </>
   );
 };

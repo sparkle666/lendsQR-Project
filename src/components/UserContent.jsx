@@ -1,8 +1,10 @@
 import React from 'react';
 import Card from './Card';
 import CardList from './CardList';
-import { FaUserFriends } from "react-icons/fa"
-import { FaBeer } from 'react-icons/fa'
+import Table from "./Table"
+import TableFooter from './TableFooter';
+import TableFilter from './TableFilter';
+import TablePagination from './TablePagination';
 
 const UserContent = () => {
   return (
@@ -14,6 +16,11 @@ const UserContent = () => {
         <Card title="Users With Loan" stats={12898} />
         <Card title="Users With Savings" stats={128998} />
       </CardList>
+      <Table />
+      <TableFooter>
+        <TableFilter />
+        <TablePagination />
+      </TableFooter>
     </div>
   );
 };

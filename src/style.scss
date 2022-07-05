@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600&family=Roboto:wght@300;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600&family=Roboto:wght@300;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,600;1,700&display=swap");
 
 //  Default colors
-$navlinkColor: #213F7D;
+$primaryColor: #213f7d;
+$navlinkHover: #363636;
 $fontWeight: 400;
 $fontSize: 16px;
 $fontFamily: Work Sans;
@@ -15,8 +16,11 @@ $fontFamily: Work Sans;
 }
 p {
   font-family: $fontFamily, "Poppins";
-  color: #213f7d;
+  color: $primaryColor;
 }
+
+
+
 input {
   display: block;
 }
@@ -26,10 +30,11 @@ a {
   text-decoration: none;
   font-size: $fontSize;
   font-weight: $fontWeight;
+  &:hover {
+    color: $navlinkHover;
+  }
 }
-a:hover {
-  color: #363636;
-}
+
 hr {
   background-color: whitesmoke;
   border: none;
@@ -83,12 +88,12 @@ img {
   z-index: 2;
 }
 .sidebar {
-  width: 300px;
+  width: 210px;
   background: #ffffff;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
   height: 100vh;
   z-index: 1;
-  position: fixed;
+  // position: fixed;
 }
 .body {
   width: auto;
@@ -144,7 +149,7 @@ img {
   border-radius: 4px;
 }
 .card__title {
-  font-family: 'Work Sans';
+  font-family: "Work Sans";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -187,12 +192,67 @@ img {
 }
 // Dropdown
 
-.dropdown button{
+.dropdown button {
   outline: none;
   border-color: none;
 }
-a > span > svg{
+a > span > svg {
   margin-right: 10px;
+}
+
+// Table
+.table-container {
+  background: #ffffff;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  margin-top: 34px;
+  padding: 20px;
+  color: $primaryColor;
+
+  th > span{
+    font-size: 12px;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  table {
+    color: $primaryColor;
+    text-align: left;
+    border: none;
+    outline: none;
+    th, td {
+      padding: 14px;
+      
+    }
+    thead {
+      font-weight: 600;
+      border: none;
+      padding: 16px;
+    tr {
+        border: 0;
+        // margin: 14px;
+        text-align: left;
+      }
+    }
+    th {
+      border: none;
+    }
+    td {
+      margin: 24px;
+      text-align: left;
+      font-size: 14px;
+    }
+    .tag{
+      font-size: 14px;
+    }
+  }
+}
+
+.table__footer{
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Mobile responsive */
