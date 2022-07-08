@@ -1,6 +1,5 @@
 import React from "react";
-import { FaRegBell, FaBell, FaSearch } from "react-icons/fa";
-import { IconContext } from "react-icons";
+import { FaRegBell, FaSearch } from "react-icons/fa";
 
 const TopNav = () => {
   return (
@@ -54,7 +53,7 @@ const TopNav = () => {
             </div>
             <div className="navbar-item">
               <a href="#">
-                <FaRegBell />
+                <FaRegBell style={{ color: "#213F7D", fontSize: "20px" }} />
               </a>
             </div>
             <div className="navbar-item">
