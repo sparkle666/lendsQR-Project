@@ -6,6 +6,7 @@ import TableFooter from './TableFooter';
 import TableFilter from './TableFilter';
 import TablePagination from './TablePagination';
 import {FaUsers} from "react-icons/fa"
+import FilterCard from './FilterCard';
 
 const UserContent = () => {
 
@@ -23,6 +24,7 @@ const UserContent = () => {
         <TableFilter />
         <TablePagination />
       </TableFooter>
+      <FilterCard display={true} />
     </div>
   );
 };
